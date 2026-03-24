@@ -81,32 +81,6 @@
       ]
     },
     {
-      "@type": "HowTo",
-      "name": "Step-by-Step Guide to Finding Cheap Flights",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "text": "Use “Everywhere” search on Skyscanner to find lowest prices worldwide."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Book on weekdays for lower fares, avoid weekends."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Compare multiple airports (NYC: JFK, LGA, EWR)."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Set price alerts to track drops instantly."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Check airline direct promotions—some are lower than aggregators."
-        }
-      ]
-    },
-    {
       "@type": "TravelAgency",
       "name": "Skyscanner",
       "url": "https://www.skyscanner.net/",
@@ -121,52 +95,71 @@
 </script>
 
 <style>
-body { font-family: Arial,sans-serif; margin:0; padding:0; background:#f4f7f9; color:#333; line-height:1.6; }
+body {
+  font-family: Arial,sans-serif;
+  margin:0;
+  padding:0;
+  background: linear-gradient(180deg, #001f4d, #002b66);
+  color:#fff;
+  line-height:1.6;
+}
 a { text-decoration:none; color:inherit; }
 h1,h2,h3 { margin:0 0 10px; }
 header, footer { text-align:center; padding:40px 20px; color:#fff; }
-header { background: linear-gradient(135deg,#00b4d8,#90e0ef); }
-.keyword-bar { font-weight:bold; margin-top:10px; font-size:1.2rem; }
+header { background: linear-gradient(135deg,#001f4d,#002b66); }
+.keyword-bar { font-weight:bold; margin-top:10px; font-size:1.2rem; color:#ffd700; }
+
+/* Carousel */
 .carousel { position:relative; max-width:1000px; margin:30px auto; overflow:hidden; border-radius:12px; }
 .carousel-slide { display:none; position:relative; width:100%; transition:0.5s ease-in-out; }
 .carousel-slide img { width:100%; display:block; object-fit:cover; border-radius:12px; }
 .carousel-slide.active { display:block; }
-.carousel-overlay { position:absolute; bottom:15%; left:10%; color:#fff; background:rgba(0,0,0,0.5); padding:15px 20px; border-radius:10px; max-width:60%; }
+.carousel-overlay { position:absolute; bottom:10%; left:10%; color:#ffd700; background:rgba(0,0,0,0.6); padding:15px 20px; border-radius:12px; max-width:70%; }
 .carousel-overlay h3 { margin:0 0 5px; font-size:1.5rem; }
 .carousel-overlay p { margin:0; font-size:1.2rem; font-weight:bold; }
 .carousel-buttons { position:absolute; top:50%; width:100%; display:flex; justify-content:space-between; transform:translateY(-50%); }
-.carousel-buttons button { background: rgba(0,0,0,0.5); border:none; color:#fff; padding:10px; font-size:1.5rem; cursor:pointer; border-radius:50%; transition:0.3s; }
+.carousel-buttons button { background: rgba(0,0,0,0.5); border:none; color:#ffd700; padding:10px; font-size:1.5rem; cursor:pointer; border-radius:50%; transition:0.3s; }
 .carousel-buttons button:hover { background: rgba(0,0,0,0.8); }
-main { max-width:1100px; margin:0 auto; padding:20px; }
-.search-box { background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-bottom:40px; }
+
+/* Search box */
+.search-box { background:#003366; padding:25px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.6); margin:-50px auto 40px; max-width:700px; position:relative; z-index:10; }
 .search-box form { display:grid; gap:15px; }
-.search-box input, .search-box button { padding:12px; font-size:1rem; border-radius:8px; border:1px solid #ccc; }
-.search-box button { background:#00b4d8; color:#fff; font-weight:bold; border:none; cursor:pointer; transition:0.3s; }
-.search-box button:hover { background:#0077a3; }
+.search-box input, .search-box button { padding:12px; font-size:1rem; border-radius:8px; border:1px solid #ffd700; }
+.search-box button { background:#ffd700; color:#003366; font-weight:bold; border:none; cursor:pointer; transition:0.3s; }
+.search-box button:hover { background:#ffc107; }
+
+/* Features */
 .features { display:grid; gap:25px; margin-bottom:40px; }
-.feature { background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-.feature h3 { margin-top:0; }
-.feature-link { display:inline-block; margin-top:10px; padding:10px 15px; background:#00b4d8; color:#fff; border-radius:8px; transition:0.3s; }
-.feature-link:hover { background:#0077a3; }
-.faq-section h2 { text-align:center; margin-bottom:20px; }
+.feature { background:#002b66; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
+.feature h3 { margin-top:0; color:#ffd700; }
+.feature p { color:#f0f0f0; }
+.feature-link { display:inline-block; margin-top:10px; padding:10px 15px; background:#ffd700; color:#003366; border-radius:8px; transition:0.3s; font-weight:bold; }
+.feature-link:hover { background:#ffc107; }
+
+/* FAQ */
+.faq-section h2 { text-align:center; margin-bottom:20px; color:#ffd700; }
 .faq-grid { display:grid; gap:15px; }
-.faq-item { background:#fff; padding:15px; border-radius:12px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+.faq-item { background:#002b66; padding:15px; border-radius:12px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.3); }
 .faq-item.active .faq-answer { display:block; }
-.faq-answer { display:none; margin-top:10px; }
+.faq-answer { display:none; margin-top:10px; color:#f0f0f0; }
+
+/* CTA */
 .cta { text-align:center; margin:50px 0; }
-.cta-button { background:#00b4d8; color:#fff; padding:15px 25px; font-size:1.2rem; font-weight:bold; border-radius:10px; display:inline-block; transition:0.3s; }
-.cta-button:hover { background:#0077a3; }
-footer { background:#333; color:#fff; text-align:center; padding:30px 20px; }
-footer a { color:#00b4d8; }
+.cta-button { background:#ffd700; color:#003366; padding:15px 25px; font-size:1.2rem; font-weight:bold; border-radius:10px; display:inline-block; transition:0.3s; }
+.cta-button:hover { background:#ffc107; }
+
+/* Footer */
+footer { background:#001f4d; color:#fff; text-align:center; padding:30px 20px; }
+footer a { color:#ffd700; }
+
 @media(min-width:768px){ .features{grid-template-columns:repeat(3,1fr);} }
 </style>
 </head>
 <body>
 
 <header role="banner">
-<h1><a href="https://convert.ctypy.com/aff_c?offer_id=29465&aff_id=21885" target="_blank" style="color:white;">Skyscanner Cheap Flights 2026</a></h1>
-<div class="keyword-bar">NYC JFK $199 CANCUN • LONDON LHR £229 DUBAI • PARIS CDG €89 HOTELS</div>
-<p>Compare 1200+ airlines live worldwide. Get NYC→Cancun $199, London→Dubai £229, Paris Hotels €89. Step-by-step tips included.</p>
+<h1><a href="https://convert.ctypy.com/aff_c?offer_id=29465&aff_id=21885" target="_blank" style="color:#ffd700;">Skyscanner Cheap Flights 2026</a></h1>
+<div class="keyword-bar">NYC JFK $199 • LONDON LHR £229 • PARIS CDG €89 HOTELS</div>
 
 <div class="carousel">
 <a class="carousel-slide active" href="https://convert.ctypy.com/aff_c?offer_id=29465&aff_id=21885" target="_blank">
@@ -218,17 +211,6 @@ footer a { color:#00b4d8; }
 <p>Booking.com verified, breakfast included. Live hotel rates 2.1M+ properties.</p>
 <a href="https://convert.ctypy.com/aff_c?offer_id=29465&aff_id=21885" class="feature-link" target="_blank">🏨 BOOK NOW</a>
 </article>
-</section>
-
-<section>
-<h2>Step-by-Step Guide to Finding Cheap Flights</h2>
-<ul>
-<li>Use “Everywhere” search on Skyscanner to find lowest prices worldwide.</li>
-<li>Book on weekdays for lower fares, avoid weekends.</li>
-<li>Compare multiple airports (NYC: JFK, LGA, EWR).</li>
-<li>Set price alerts to track drops instantly.</li>
-<li>Check airline direct promotions—some are lower than aggregators.</li>
-</ul>
 </section>
 
 <section class="faq-section">
